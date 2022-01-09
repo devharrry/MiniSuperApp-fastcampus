@@ -42,6 +42,7 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
     let financeHomeRouting = financeHome.build(withListener: interactor)
     let profileHomeRouting = profileHome.build(withListener: interactor)
     
+    // attachChild : 립스 트리를 만들어서 각 리블렛들의 레퍼런스를 유지하고 인터랙터의 라이프 사이클 관련 메소드를 호출하는 작업 
     attachChild(appHomeRouting)
     attachChild(financeHomeRouting)
     attachChild(profileHomeRouting)
